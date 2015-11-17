@@ -1,7 +1,7 @@
-# Interface check stamp
+# Interface check stamp for [stampit](https://github.com/stampit-org/stampit)
 ## Why?
 When implementing an interface, one would expect that the program, when executed, throws errors if methods are unimplemented.
-With the current version of stampit (2), this is not the case. When adding this Interface check stamp to your interface,
+With the current version of [stampit](https://github.com/stampit-org/stampit) (2), this is not the case. When adding this Interface check stamp to your interface,
 you make sure that your program fails if the methods defined in your interface are not implemented.
 
 ## How?
