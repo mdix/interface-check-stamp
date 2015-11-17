@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mdix/interface-check-stamp.svg?branch=master)](https://travis-ci.org/mdix/interface-check-stamp)
 # Interface check stamp for [stampit](https://github.com/stampit-org/stampit)
 ## Why?
 When implementing an interface, one would expect that the program, when executed, throws errors if methods are unimplemented.
