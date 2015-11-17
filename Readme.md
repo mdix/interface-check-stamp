@@ -6,17 +6,17 @@ you make sure that your program fails if the methods defined in your interface a
 
 ## How?
 On your shell
-```
-npm install <gitrepo> --save
+```bash
+npm install mdix/interface-check-stamp --save
 ```
 
-In your program
-```
+In your program just compose the interface check stamp into the interface you create:
+```javascript
 const InterfaceCheck = require('interface-check-stamp');
 
 const Interface = 
     stampit()
-        .compose(InterfaceCheck)
+        .compose(InterfaceCheck) // <-- add interface check stamp here
         .methods({foo: () => {}});
 
 const Implementation = 
@@ -24,9 +24,9 @@ const Implementation =
         .compose(Interface)
 ```
 
-This will throw an error that 'foo' is not implemented. This can be fixed by adding the Implementation:
+This will throw an error that 'foo' is not implemented which can be fixed by adding the implementation:
 
-```
+```javascript
 // see above for InterfaceCheck & Interface 
 
 const Implementation = 
