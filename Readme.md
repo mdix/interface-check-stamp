@@ -33,7 +33,7 @@ This will throw an error that 'someMethod' is not implemented which can be fixed
 const Implementation = 
     stampit()
         .compose(Interface)
-        .methods({foo: () => { someMethod(); });
+        .methods({someMethod: () => { /* someImplementation */ });
 ```
 
 ## Development
