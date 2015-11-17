@@ -1,0 +1,17 @@
+{
+  "name": "interface-check-stamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test | faucet"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "stampit": "^2.1.1"
+  }
+}
