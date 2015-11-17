@@ -18,14 +18,14 @@ const InterfaceCheck = require('interface-check-stamp');
 const Interface = 
     stampit()
         .compose(InterfaceCheck) // <-- add interface check stamp here
-        .methods({foo: () => {}});
+        .methods({someMethod: () => {}});
 
 const Implementation = 
     stampit()
         .compose(Interface)
 ```
 
-This will throw an error that 'foo' is not implemented which can be fixed by adding the implementation:
+This will throw an error that 'someMethod' is not implemented which can be fixed by adding the implementation:
 
 ```javascript
 // see above for InterfaceCheck & Interface 
@@ -33,7 +33,7 @@ This will throw an error that 'foo' is not implemented which can be fixed by add
 const Implementation = 
     stampit()
         .compose(Interface)
-        .methods({foo: () => { someImplementation(); });
+        .methods({foo: () => { someMethod(); });
 ```
 
 ## Development
