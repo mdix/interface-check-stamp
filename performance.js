@@ -12,7 +12,8 @@ composables.forEach((composable) => {
     const hrstart = process.hrtime();
 
     for (let i = 0; i < RUNS; i++) {
-        stampit().compose(composable.stamp).methods({foo: () => { /**/ }, bar: () => { /**/ }, baz: ( /**/ ) => {}})();
+        let Interface = stampit().compose(composable.stamp).methods({foo: () => {}, bar: () => {}, baz: () => {}});
+        stampit().compose(Interface).methods({foo: () => {/**/}, bar: () => {/**/}, baz: () => {/**/}})();
     }
 
     const hrend = process.hrtime(hrstart);
