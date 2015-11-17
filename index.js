@@ -1,12 +1,11 @@
 const stampit = require('stampit');
+const onlyWhitespaceAndNewlinesBetweenBrackets = /{[\s\n]*}/;
 
 module.exports =
     stampit()
-        .init(function(stamp) {
+        .init((stamp) => {
             for (const method in stamp.stamp.fixed.methods) {
-                const currentMethod = stamp.stamp.fixed.methods[method];
-
-                if (currentMethod.toString().match(/{[\s\n]*}/g) !== null) {
+                if (stamp.stamp.fixed.methods[method].toString().match(onlyWhitespaceAndNewlinesBetweenBrackets) !== null) {
                     throw new Error('Method \'' + method.toString() + '\' needs to be implemented.');
                 }
             }

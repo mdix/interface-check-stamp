@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test | faucet"
+    "test": "node test | faucet",
+    "posttest": "node performance"
   },
   "author": "",
   "license": "ISC",
